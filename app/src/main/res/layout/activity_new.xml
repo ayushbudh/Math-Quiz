@@ -170,8 +170,8 @@
 
     <TextView
         android:id="@+id/score"
-        android:layout_width="280dp"
-        android:layout_height="51dp"
+        android:layout_width="359dp"
+        android:layout_height="150dp"
         android:text="Your Score:"
         android:textSize="35sp"
         android:textStyle="bold"
