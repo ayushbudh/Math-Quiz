@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/upperbanner"
+    tools:context=".NewActivity">
+
+    <TextView
+        android:id="@+id/quesText"
+        android:layout_width="120dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="62dp"
+        android:background="#FFFFFF"
+        android:text="6 + 2"
+        android:textAlignment="center"
+        android:textColor="#191818"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="241dp"
+        android:layout_height="162dp"
+        android:layout_marginTop="50dp"
+        android:alpha="1"
+        app:columnCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.304"
+        app:rowCount="2">
+
+        <Button
+            android:id="@+id/option1"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:background="#E11111"
+            android:onClick="o1Clicked"
+            android:text="23"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/option2"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:background="#9C27B0"
+            android:onClick="o2Clicked"
+            android:text="2"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/option3"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:background="#00BCD4"
+            android:onClick="o3Clicked"
+            android:text="90"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/option4"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:background="#8BC34A"
+            android:onClick="o4Clicked"
+            android:text="8"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+
+    <TextView
+        android:id="@+id/timerText"
+        android:layout_width="71dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="2dp"
+        android:background="#FFC107"
+        android:text="0s"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toStartOf="@+id/quesText"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.392" />
+
+    <TextView
+        android:id="@+id/roundsText"
+        android:layout_width="112dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:background="#03A9F4"
+        android:text="0/0"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toEndOf="@+id/quesText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/goButton"
+        android:layout_width="241dp"
+        android:layout_height="54dp"
+        android:background="#43C849"
+        android:onClick="goClicked"
+        android:text="Beat the timer!"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.548" />
+
+    <TextView
+        android:id="@+id/winText"
+        android:layout_width="192dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="8dp"
+        android:background="#00FFFFFF"
+        android:textAlignment="center"
+        android:textColor="#F44336"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quesText" />
+
+    <Button
+        android:id="@+id/playagain"
+        android:layout_width="131dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="33dp"
+        android:background="#43C849"
+        android:fontFamily="sans-serif"
+        android:onClick="pAClicked"
+        android:text="Play Again!"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goButton" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="280dp"
+        android:layout_height="51dp"
+        android:text="Your Score:"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playagain"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
